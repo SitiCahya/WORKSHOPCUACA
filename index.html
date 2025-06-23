@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikasi cuaca sederhana untuk mengecek cuaca di berbagai kota">
+    <meta name="keywords" content="cuaca, weather, aplikasi cuaca, ramalan cuaca">
+    <title>Aplikasi Cuaca - Cek Cuaca Kota</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>🌤️ Aplikasi Cuaca</h1>
+            <p class="subtitle">Cek kondisi cuaca terkini di kota manapun</p>
+        </header>
+        
+        <section class="search-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="city" 
+                    placeholder="Masukkan nama kota..." 
+                    autocomplete="off"
+                    required
+                />
+                <button id="getWeather" type="button" aria-label="Cari cuaca kota">
+                    <span class="button-text">Cari</span>
+                    <span class="button-icon">🔍</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="weather" class="weather-section hidden" aria-live="polite">
+            <div class="weather-card">
+                <h2 id="location" class="location-title"></h2>
+                <div class="weather-info">
+                    <div class="temperature-container">
+                        <p id="temperature" class="temperature"></p>
+                        <img id="icon" alt="Ikon cuaca" class="weather-icon" />
+                    </div>
+                    <p id="description" class="description"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
